@@ -1,0 +1,39 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "name": "High School: The worst years of my life",
+      "image": "",
+      "duration": 90,
+      "description": "13-year-old Rafe does not think of life without drawing. And when the director at the new school selects and dissolves his notebook with drawings in acid, the guy decides to take revenge. The school has stupid rules, and Rafe will creatively break them one by one.",
+      "authorId": 1
+    }
+  ],
+  "authors": [
+    {
+      "id": 1,
+      "name": "Peter Parker",
+      "description": "Hi, my name is Peter Parker. I have been doing Spider Man since 2010, I know well: Python, JavaScript, Adobe After Effects, Figma.\nThis is my first experience in designing full-fledged mobile applications.\nThis application is completely made by me. The following tasks were solved: development of application logic, prototype, design, prototyping and animation customization.\nI want to get a job in an IT company as a UX /UI designer and develop further in this direction."
+    },
+    {
+      "id": 2,
+      "name": "Mary Jane",
+      "description": "Hi, my name is Mary Jane. I have been Peter Parker's girlfriend since 2013.\nThis is my first experience in designing full-fledged mobile applications.\nI want to get a job in an IT company as a UX /UI designer and develop further in this direction."
+    },
+    {
+      "id": 3,
+      "name": "Ben Parker",
+      "description": "Hi, my name is Ben Parker. I have been Peter Parker's uncle since 2000, I know well: Adobe Photoshop, Adobe Illustrator, Adobe After Effects, Figma.\nThis is my first experience in designing full-fledged mobile applications.\nThis application is completely made by me. The following tasks were solved: development of application logic, prototype, design, prototyping and animation customization. \nI want to get a job in an IT company as a UX /UI designer and develop further in this direction."
+    }
+  ],
+  "playlists": [
+    {
+      "id": 1,
+      "name": "High School: The worst years of my life",
+      "duration": 90,
+      "description": "13-year-old Rafe does not think of life without drawing. And when the director at the new school selects and dissolves his notebook with drawings in acid, the guy decides to take revenge. The school has stupid rules, and Rafe will creatively break them one by one.",
+      "created_at": "something",
+      "is_public": true
+    }
+  ]
+}
