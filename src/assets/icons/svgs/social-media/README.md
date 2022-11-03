@@ -1,0 +1,1 @@
+Các file icon mạng xã hội dạng svg khi convert từ Figma thì vì một lý do nào đó, chữ không nằm ở giữa, nên các file svg này để lại đây để tượng trưng. Hiện tại mọi ảnh nền tảng mạng xã hội dùng trong app sẽ ở trong `src/assets/img`.
