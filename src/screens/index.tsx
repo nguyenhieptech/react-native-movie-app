@@ -1,1 +1,1 @@
-export * from './PreviewIcons';
+export * from './PreviewAssets';

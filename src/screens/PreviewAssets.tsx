@@ -1,5 +1,6 @@
 import React from 'react';
 import { ScrollView, Text, View } from 'react-native';
+import FastImage from 'react-native-fast-image';
 import {
   AddToPlaylistIcon,
   AvatarIcon,
@@ -34,14 +35,21 @@ import {
  * This screen for previewing icons.
  * Màn hình xem trước icon.
  */
-export function PreviewIcons() {
+export function PreviewAssets() {
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
+    <ScrollView className="px-4" showsVerticalScrollIndicator={false}>
       <View className="flex-1 items-center justify-center">
-        <Text className="font-bold text-5xl text-slate-100 mt-16">
+        <Text className="font-bold text-4xl text-slate-100 mt-16">
           Preview Icons
         </Text>
-        <View className="mt-8 space-y-4">
+        <Text className="font-medium italic text-base text-slate-100 mt-4">
+          Scroll horizontally to see more
+        </Text>
+        <ScrollView
+          className="mt-8 space-x-4 flex-1"
+          horizontal
+          showsHorizontalScrollIndicator={false}
+        >
           <AddToPlaylistIcon className="text-primary w-5 h-5" />
           <AddToPlaylistIcon className="text-slate-100 w-5 h-5" />
           <AvatarIcon className="text-slate-100 w-5 h-5" />
@@ -75,7 +83,64 @@ export function PreviewIcons() {
           <WarningIcon className="text-primary w-5 h-5" />
           <XDeleteTextInputIcon className="text-slate-100 w-5 h-5" />
           <XIcon className="text-slate-100 w-5 h-4" />
-        </View>
+        </ScrollView>
+
+        <Text className="font-bold text-4xl text-slate-100 mt-16">
+          Preview Images
+        </Text>
+        <Text className="font-medium italic text-base text-slate-100 mt-4">
+          Scroll horizontally to see more
+        </Text>
+        <ScrollView
+          className="flex-row mt-8 space-x-4"
+          horizontal
+          showsHorizontalScrollIndicator={false}
+        >
+          <FastImage
+            className="w-15 h-15"
+            source={require('src/assets/img/behance.png')}
+          />
+          <FastImage
+            className="w-15 h-15"
+            source={require('src/assets/img/dribbble.png')}
+          />
+          <FastImage
+            className="w-15 h-15"
+            source={require('src/assets/img/facebook.png')}
+          />
+          <FastImage
+            className="w-15 h-15"
+            source={require('src/assets/img/link.png')}
+          />
+          <FastImage
+            className="w-15 h-15"
+            source={require('src/assets/img/messenger.png')}
+          />
+          <FastImage
+            className="w-15 h-15"
+            source={require('src/assets/img/pinterest.png')}
+          />
+          <FastImage
+            className="w-15 h-15"
+            source={require('src/assets/img/telegram.png')}
+          />
+          <FastImage
+            className="w-15 h-15"
+            source={require('src/assets/img/tumblr.png')}
+          />
+          <FastImage
+            className="w-15 h-15"
+            source={require('src/assets/img/twitter.png')}
+          />
+          <FastImage
+            className="w-15 h-15"
+            source={require('src/assets/img/whatsapp.png')}
+          />
+          <FastImage
+            className="w-15 h-15"
+            source={require('src/assets/img/youtube.png')}
+          />
+        </ScrollView>
       </View>
     </ScrollView>
   );
