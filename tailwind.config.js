@@ -9,6 +9,9 @@ module.exports = {
         mistake2: '#E64646',
         right: '#4BB34B',
       },
+      spacing: {
+        15: 60,
+      },
     },
   },
   plugins: [],
