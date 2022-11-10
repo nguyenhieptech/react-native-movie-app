@@ -39,105 +39,105 @@ export function PreviewAssets() {
   return (
     <ScrollView className="px-4" showsVerticalScrollIndicator={false}>
       <View className="flex-1 items-center justify-center">
-        <Text className="font-bold text-4xl text-slate-100 mt-16">
+        <Text className="mt-16 text-4xl font-bold text-slate-100">
           Preview Icons
         </Text>
-        <Text className="font-medium italic text-base text-slate-100 mt-4">
+        <Text className="mt-4 text-base font-medium italic text-slate-100">
           Scroll horizontally to see more
         </Text>
         <ScrollView
-          className="mt-8 space-x-4 flex-1"
+          className="mt-8 flex-1 space-x-4"
           horizontal
           showsHorizontalScrollIndicator={false}
         >
-          <AddToPlaylistIcon className="text-primary w-5 h-5" />
-          <AddToPlaylistIcon className="text-slate-100 w-5 h-5" />
-          <AvatarIcon className="text-slate-100 w-5 h-5" />
-          <ChevronLeftIcon className="text-slate-100 w-5 h-5" />
-          <ChevronDownIcon className="text-slate-100 w-5 h-5" />
-          <DownloadIcon className="text-primary w-5 h-5" />
-          <DownloadIcon className="text-slate-100 w-5 h-5" />
-          <EditIcon className="text-slate-100 w-5 h-5" />
-          <HeartIcon className="text-primary w-5 h-5" />
-          <HeartInactiveIcon className="text-slate-100 w-5 h-5" />
-          <HomeIcon className="text-primary w-5 h-5" />
-          <HomeIcon className="text-slate-100 w-5 h-5" />
-          <MailIcon className="text-primary w-5 h-5" />
-          <PlayIcon className="text-slate-100 w-5 h-5" />
-          <PlaylistIcon className="text-primary w-5 h-5" />
-          <PlaylistIcon className="text-slate-100 w-5 h-5" />
-          <PlusIcon className="text-slate-100 w-5 h-4" />
-          <RadioButtonIcon className="text-primary w-5 h-5" />
-          <RadioButtonInactiveIcon className="text-slate-100 w-5 h-5" />
-          <RightArrowIcon className="text-slate-100 w-5 h-5" />
-          <SaveIcon className="text-slate-100 w-5 h-5" />
-          <SearchIcon className="text-slate-100 w-5 h-5" />
-          <SettingsIcon className="text-primary w-5 h-5" />
-          <SettingsIcon className="text-slate-100 w-5 h-5" />
-          <ShareIcon className="text-primary w-5 h-5" />
-          <ShareIcon className="text-slate-100 w-5 h-5" />
-          <SliderIcon className="text-primary w-5 h-5" />
-          <TrashIcon className="text-slate-100 w-5 h-5" />
-          <VerticalDotsIcon className="text-slate-100 w-5 h-4" />
-          <UploadImageIcon className="text-slate-100 w-5 h-5" />
-          <WarningIcon className="text-primary w-5 h-5" />
-          <XDeleteTextInputIcon className="text-slate-100 w-5 h-5" />
-          <XIcon className="text-slate-100 w-5 h-4" />
+          <AddToPlaylistIcon className="h-5 w-5 text-primary" />
+          <AddToPlaylistIcon className="h-5 w-5 text-slate-100" />
+          <AvatarIcon className="h-5 w-5 text-slate-100" />
+          <ChevronLeftIcon className="h-5 w-5 text-slate-100" />
+          <ChevronDownIcon className="h-5 w-5 text-slate-100" />
+          <DownloadIcon className="h-5 w-5 text-primary" />
+          <DownloadIcon className="h-5 w-5 text-slate-100" />
+          <EditIcon className="h-5 w-5 text-slate-100" />
+          <HeartIcon className="h-5 w-5 text-primary" />
+          <HeartInactiveIcon className="h-5 w-5 text-slate-100" />
+          <HomeIcon className="h-5 w-5 text-primary" />
+          <HomeIcon className="h-5 w-5 text-slate-100" />
+          <MailIcon className="h-5 w-5 text-primary" />
+          <PlayIcon className="h-5 w-5 text-slate-100" />
+          <PlaylistIcon className="h-5 w-5 text-primary" />
+          <PlaylistIcon className="h-5 w-5 text-slate-100" />
+          <PlusIcon className="h-4 w-5 text-slate-100" />
+          <RadioButtonIcon className="h-5 w-5 text-primary" />
+          <RadioButtonInactiveIcon className="h-5 w-5 text-slate-100" />
+          <RightArrowIcon className="h-5 w-5 text-slate-100" />
+          <SaveIcon className="h-5 w-5 text-slate-100" />
+          <SearchIcon className="h-5 w-5 text-slate-100" />
+          <SettingsIcon className="h-5 w-5 text-primary" />
+          <SettingsIcon className="h-5 w-5 text-slate-100" />
+          <ShareIcon className="h-5 w-5 text-primary" />
+          <ShareIcon className="h-5 w-5 text-slate-100" />
+          <SliderIcon className="h-5 w-5 text-primary" />
+          <TrashIcon className="h-5 w-5 text-slate-100" />
+          <VerticalDotsIcon className="h-4 w-5 text-slate-100" />
+          <UploadImageIcon className="h-5 w-5 text-slate-100" />
+          <WarningIcon className="h-5 w-5 text-primary" />
+          <XDeleteTextInputIcon className="h-5 w-5 text-slate-100" />
+          <XIcon className="h-4 w-5 text-slate-100" />
         </ScrollView>
 
-        <Text className="font-bold text-4xl text-slate-100 mt-16">
+        <Text className="mt-16 text-4xl font-bold text-slate-100">
           Preview Images
         </Text>
-        <Text className="font-medium italic text-base text-slate-100 mt-4">
+        <Text className="mt-4 text-base font-medium italic text-slate-100">
           Scroll horizontally to see more
         </Text>
         <ScrollView
-          className="flex-row mt-8 space-x-4"
+          className="mt-8 flex-row space-x-4"
           horizontal
           showsHorizontalScrollIndicator={false}
         >
           <FastImage
-            className="w-15 h-15"
+            className="h-15 w-15"
             source={require('src/assets/img/behance.png')}
           />
           <FastImage
-            className="w-15 h-15"
+            className="h-15 w-15"
             source={require('src/assets/img/dribbble.png')}
           />
           <FastImage
-            className="w-15 h-15"
+            className="h-15 w-15"
             source={require('src/assets/img/facebook.png')}
           />
           <FastImage
-            className="w-15 h-15"
+            className="h-15 w-15"
             source={require('src/assets/img/link.png')}
           />
           <FastImage
-            className="w-15 h-15"
+            className="h-15 w-15"
             source={require('src/assets/img/messenger.png')}
           />
           <FastImage
-            className="w-15 h-15"
+            className="h-15 w-15"
             source={require('src/assets/img/pinterest.png')}
           />
           <FastImage
-            className="w-15 h-15"
+            className="h-15 w-15"
             source={require('src/assets/img/telegram.png')}
           />
           <FastImage
-            className="w-15 h-15"
+            className="h-15 w-15"
             source={require('src/assets/img/tumblr.png')}
           />
           <FastImage
-            className="w-15 h-15"
+            className="h-15 w-15"
             source={require('src/assets/img/twitter.png')}
           />
           <FastImage
-            className="w-15 h-15"
+            className="h-15 w-15"
             source={require('src/assets/img/whatsapp.png')}
           />
           <FastImage
-            className="w-15 h-15"
+            className="h-15 w-15"
             source={require('src/assets/img/youtube.png')}
           />
         </ScrollView>
