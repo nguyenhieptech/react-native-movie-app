@@ -17,7 +17,9 @@ interface ButtonProps extends TouchableOpacityProps {
 }
 
 export const CustomButton = forwardRef<TouchableOpacity, ButtonProps>(
-  ({ leftIcon, text = 'Button', children, ...props }, ref) => {
+  (props, ref) => {
+    const { leftIcon, text = 'Button', children, ...otherProps } = props;
+
     return (
       <TouchableOpacity
         className={classNames(
@@ -25,7 +27,7 @@ export const CustomButton = forwardRef<TouchableOpacity, ButtonProps>(
           leftIcon ? 'space-x-4' : ''
         )}
         ref={ref}
-        {...props}
+        {...otherProps}
       >
         <View className="absolute inset-0 bg-white opacity-10" />
 

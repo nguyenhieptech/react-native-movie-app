@@ -40,7 +40,7 @@ export function HomeNewMovieScreen() {
           <Text className="mt-8 text-2xl font-semibold text-white">
             Research
           </Text>
-          <SearchInput text={searchText} onChangeText={setSearchText} />
+          <SearchInput value={searchText} onChangeText={setSearchText} />
 
           {/* Movies */}
           <HorizontalLine />
