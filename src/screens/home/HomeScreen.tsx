@@ -21,7 +21,7 @@ export function HomeScreen() {
 
       <ScrollView showsVerticalScrollIndicator={false}>
         <Text className="mt-8 text-2xl font-semibold text-white">Research</Text>
-        <SearchInput text={text} onChangeText={onChangeText} />
+        <SearchInput value={text} onChangeText={onChangeText} />
 
         {/* Playlists */}
         <HorizontalLine />
