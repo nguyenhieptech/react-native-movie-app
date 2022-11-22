@@ -1,20 +1,18 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
-import { PlaylistScreen } from 'src/screens';
-
-export type PlaylistStackParamList = {
-  Playlist: undefined;
-};
+import { DetailMovieScreen, PlaylistScreen } from 'src/screens';
+import { PlaylistStackParamList } from '../types';
 
 const Stack = createNativeStackNavigator<PlaylistStackParamList>();
 
-export default function HomeStack() {
+export function PlaylistStack() {
   return (
     <Stack.Navigator
       initialRouteName="Playlist"
       screenOptions={{ headerShown: false }}
     >
       <Stack.Screen name="Playlist" component={PlaylistScreen} />
+      <Stack.Screen name="DetailMovie" component={DetailMovieScreen} />
     </Stack.Navigator>
   );
 }

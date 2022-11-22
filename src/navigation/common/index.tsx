@@ -1,1 +1,1 @@
-export * from './CommonStackNavigator';
+export * from './CommonScreensStackNavigator';

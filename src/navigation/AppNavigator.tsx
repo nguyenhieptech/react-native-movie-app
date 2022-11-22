@@ -1,26 +1,22 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { CommonStackNavigator, CommonStackNavigatorParamList } from './common';
-import { MainBottomTabsNavigator, MainTabsNavigatorParamList } from './main';
+import { CommonScreensStackNavigator } from './common';
+import { MainBottomTabsNavigator } from './main';
+import { AppStackParamList } from './types';
 
-export type AppStackParamList = {
-  MainTabs: undefined;
-} & MainTabsNavigatorParamList &
-  CommonStackNavigatorParamList;
-
-export const AppStack = createNativeStackNavigator<AppStackParamList>();
+export const Stack = createNativeStackNavigator<AppStackParamList>();
 
 export function AppNavigator() {
   return (
     <NavigationContainer>
-      <AppStack.Navigator>
-        <AppStack.Screen
-          name="MainTabs"
+      <Stack.Navigator initialRouteName="MainBottomTabs">
+        <Stack.Screen
+          name="MainBottomTabs"
           component={MainBottomTabsNavigator}
           options={{ headerShown: false }}
         />
-        {CommonStackNavigator()}
-      </AppStack.Navigator>
+        {CommonScreensStackNavigator()}
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
