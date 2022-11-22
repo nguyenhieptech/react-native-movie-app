@@ -8,6 +8,8 @@ import {
 import { classNames } from 'src/utils';
 
 // See: https://github.com/react-native-elements/react-native-elements/blob/next/packages/base/src/Button/Button.tsx
+// https://github.com/mui/material-ui/blob/master/packages/mui-base/src/ButtonUnstyled/ButtonUnstyled.tsx
+
 interface ButtonProps extends TouchableOpacityProps {
   /** Custom left icon. */
   leftIcon?: ReactNode;
@@ -17,7 +19,7 @@ interface ButtonProps extends TouchableOpacityProps {
 }
 
 export const CustomButton = forwardRef<TouchableOpacity, ButtonProps>(
-  (props, ref) => {
+  function CustomButton(props, ref) {
     const { leftIcon, text = 'Button', children, ...otherProps } = props;
 
     return (

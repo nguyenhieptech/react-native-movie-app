@@ -1,4 +1,4 @@
-import React, { useState, forwardRef, useRef } from 'react';
+import React, { forwardRef, useRef, useState } from 'react';
 import { TextInput, TextInputProps, View } from 'react-native';
 import { SearchIcon } from 'src/assets/icons';
 
@@ -8,7 +8,7 @@ interface SearchInputProps extends TextInputProps {
 }
 
 export const SearchInput = forwardRef<TextInput, SearchInputProps>(
-  (props, ref) => {
+  function SearchInput(props, ref) {
     const { value, onChangeText, ...otherProps } = props;
 
     return (

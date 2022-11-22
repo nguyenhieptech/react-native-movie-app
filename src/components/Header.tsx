@@ -1,27 +1,39 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import { ChevronLeftIcon } from 'src/assets/icons';
+import { theme } from 'src/theme';
 
 type HeaderProps = {
   /** Title of the header. In the middle of header. */
   headerTitle: string;
 
-  /** Custom header left ReactNode. Mostly icons. */
-  headerLeft?: ReactNode;
+  /** Custom header left React Element. Mostly icons. */
+  headerLeft?: JSX.Element;
+
+  /** Custom header right React Element. */
+  headerRight?: JSX.Element;
 };
 
-export function Header({ headerTitle = 'Title', headerLeft }: HeaderProps) {
+export function Header(props: HeaderProps) {
+  const { headerTitle = 'Title', headerLeft, headerRight } = props;
+
   return (
     <View className="mt-6 flex-row justify-between">
-      <TouchableOpacity hitSlop={{ top: 10, right: 10, bottom: 10, left: 10 }}>
-        {headerLeft ? (
-          headerLeft
-        ) : (
+      {headerLeft ? (
+        <View>{headerLeft}</View>
+      ) : (
+        <TouchableOpacity hitSlop={theme.hitSlopIcon}>
           <ChevronLeftIcon className="h-5 w-5 text-white" />
-        )}
-      </TouchableOpacity>
+        </TouchableOpacity>
+      )}
       <Text className="text-white">{headerTitle}</Text>
-      <View className="mr-4" />
+      {headerRight ? (
+        <View>{headerRight}</View>
+      ) : (
+        <TouchableOpacity hitSlop={theme.hitSlopIcon}>
+          <View className="mr-4" />
+        </TouchableOpacity>
+      )}
     </View>
   );
 }
