@@ -5,7 +5,7 @@ import { Header, HorizontalLine, LinearProgressBar } from 'src/components';
 
 export function HomeHistoryScreen() {
   return (
-    <View className="flex-1 px-5">
+    <View className="flex-1 bg-black px-5">
       <FastImage
         className="absolute inset-0"
         source={require('src/assets/img/background_375_812.png')}

@@ -13,7 +13,7 @@ export function HomeScreen() {
   const [text, onChangeText] = useState('');
 
   return (
-    <View className="flex-1 px-5">
+    <View className="flex-1 bg-black px-5">
       <FastImage
         className="absolute inset-0"
         source={require('src/assets/img/background_375_1206.png')}

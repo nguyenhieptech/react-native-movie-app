@@ -27,7 +27,7 @@ export function HomeNewMovieScreen() {
   const [isToShareModalVisible, setIsToShareModalVisible] = useState(false);
 
   return (
-    <View className="flex-1">
+    <View className="flex-1 bg-black">
       <FastImage
         className="absolute inset-0"
         source={require('src/assets/img/background_375_812.png')}

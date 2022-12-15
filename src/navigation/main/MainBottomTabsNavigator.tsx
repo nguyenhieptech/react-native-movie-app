@@ -10,78 +10,26 @@ import {
   SettingsIcon,
 } from 'src/assets/icons';
 import { classNames } from 'src/utils';
-import DownloadStack from './DownloadStack';
-import HomeStack from './HomeStack';
-import PlaylistStack from './PlaylistStack';
-import SettingsStack from './SettingsStack';
+import { MainBottomTabsNavigatorParamList } from '../types';
+import { DownloadStack } from './DownloadStack';
+import { HomeStack } from './HomeStack';
+import { PlaylistStack } from './PlaylistStack';
+import { SettingsStack } from './SettingsStack';
 
-// @see https://reactnavigation.org/docs/tab-based-navigation
+// https://reactnavigation.org/docs/tab-based-navigation - v6
 
-export type MainTabsNavigatorParamList = {
-  HomeStack: undefined;
-  PlaylistStack: undefined;
-  DownloadStack: undefined;
-  SettingsStack: undefined;
-};
-
-const Tabs = createBottomTabNavigator<MainTabsNavigatorParamList>();
+const BottomTab = createBottomTabNavigator<MainBottomTabsNavigatorParamList>();
 
 export function MainBottomTabsNavigator() {
   return (
-    <Tabs.Navigator
+    <BottomTab.Navigator
       initialRouteName="HomeStack"
-      screenOptions={({ route }) => ({
+      screenOptions={{
         headerShown: false,
-        // tabBarIcon: ({ focused }) => {
-        //   return (
-        //     <View className="h-full w-full items-center justify-center border border-t-2 border-primary bg-black">
-        //       {route.name === 'HomeStack' && (
-        //         <HomeIcon
-        //           className={classNames(
-        //             'h-5 w-5',
-        //             focused
-        //               ? 'text-primary opacity-100'
-        //               : 'text-white opacity-80'
-        //           )}
-        //         />
-        //       )}
-        //       {route.name === 'PlaylistStack' && (
-        //         <PlaylistIcon
-        //           className={classNames(
-        //             'h5 w-5',
-        //             focused
-        //               ? 'text-primary opacity-100'
-        //               : 'text-white opacity-80'
-        //           )}
-        //         />
-        //       )}
-        //       {route.name === 'DownloadStack' && (
-        //         <DownloadIcon
-        //           className={classNames(
-        //             'h5 w-5',
-        //             focused
-        //               ? 'text-primary opacity-100'
-        //               : 'text-white opacity-80'
-        //           )}
-        //         />
-        //       )}
-        //       {route.name === 'SettingsStack' && (
-        //         <SettingsIcon
-        //           className={classNames(
-        //             'h5 w-5',
-        //             focused
-        //               ? 'text-primary opacity-100'
-        //               : 'text-white opacity-80'
-        //           )}
-        //         />
-        //       )}
-        //     </View>
-        //   );
-        // },
-      })}
-      tabBar={(props) => <CustomTabBar {...props} />}
+      }}
+      tabBar={(props) => <CustomBottomTabBar {...props} />}
     >
-      <Tabs.Screen
+      <BottomTab.Screen
         name="HomeStack"
         component={HomeStack}
         options={() => ({
@@ -98,7 +46,7 @@ export function MainBottomTabsNavigator() {
           },
         })}
       />
-      <Tabs.Screen
+      <BottomTab.Screen
         name="PlaylistStack"
         component={PlaylistStack}
         options={() => ({
@@ -115,7 +63,7 @@ export function MainBottomTabsNavigator() {
           },
         })}
       />
-      <Tabs.Screen
+      <BottomTab.Screen
         name="DownloadStack"
         component={DownloadStack}
         options={() => ({
@@ -132,7 +80,7 @@ export function MainBottomTabsNavigator() {
           },
         })}
       />
-      <Tabs.Screen
+      <BottomTab.Screen
         name="SettingsStack"
         component={SettingsStack}
         options={() => ({
@@ -149,7 +97,7 @@ export function MainBottomTabsNavigator() {
           },
         })}
       />
-    </Tabs.Navigator>
+    </BottomTab.Navigator>
   );
 }
 
@@ -157,7 +105,7 @@ export function MainBottomTabsNavigator() {
  * Custom Bottom Tab Bar
  * @see https://reactnavigation.org/docs/bottom-tab-navigator/#props
  */
-export function CustomTabBar({
+export function CustomBottomTabBar({
   state,
   descriptors,
   navigation,
@@ -214,19 +162,27 @@ export function CustomTabBar({
             className="h-20 flex-1 items-center justify-center bg-black"
           >
             <View className="items-center">
-              {tabIcon({ focused: isFocused, color: '', size: 0 })}
-              {typeof tabLabel === 'string' ? (
-                <Text
-                  className={classNames(
-                    'mt-1',
-                    isFocused
-                      ? 'text-primary opacity-100'
-                      : 'text-white opacity-80'
-                  )}
-                >
-                  {tabLabel}
-                </Text>
-              ) : null}
+              <>
+                {tabIcon({ focused: isFocused, color: '', size: 0 })}
+                {typeof tabLabel === 'string' ? (
+                  <Text
+                    className={classNames(
+                      'mt-1',
+                      isFocused
+                        ? 'text-primary opacity-100'
+                        : 'text-white opacity-80'
+                    )}
+                  >
+                    {tabLabel}
+                  </Text>
+                ) : (
+                  tabLabel({
+                    focused: isFocused,
+                    color: '',
+                    position: 'below-icon',
+                  })
+                )}
+              </>
             </View>
           </Pressable>
         );

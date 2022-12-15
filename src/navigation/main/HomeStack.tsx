@@ -1,16 +1,11 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import { HomeHistoryScreen, HomeNewMovieScreen, HomeScreen } from 'src/screens';
-
-export type HomeStackParamList = {
-  Home: undefined;
-  HomeHistory: undefined;
-  HomeNewMovie: undefined;
-};
+import { HomeStackParamList } from '../types';
 
 const Stack = createNativeStackNavigator<HomeStackParamList>();
 
-export default function HomeStack() {
+export function HomeStack() {
   return (
     <Stack.Navigator
       initialRouteName="Home"

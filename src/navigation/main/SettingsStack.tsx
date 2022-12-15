@@ -1,14 +1,11 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import { SettingsScreen } from 'src/screens';
-
-export type SettingsStackParamList = {
-  Settings: undefined;
-};
+import { SettingsStackParamList } from '../types';
 
 const Stack = createNativeStackNavigator<SettingsStackParamList>();
 
-export default function HomeStack() {
+export function SettingsStack() {
   return (
     <Stack.Navigator
       initialRouteName="Settings"

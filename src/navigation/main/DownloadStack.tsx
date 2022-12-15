@@ -1,14 +1,11 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import { DownloadScreen } from 'src/screens';
-
-export type DownloadStackParamList = {
-  Download: undefined;
-};
+import { DownloadStackParamList } from '../types';
 
 const Stack = createNativeStackNavigator<DownloadStackParamList>();
 
-export default function HomeStack() {
+export function DownloadStack() {
   return (
     <Stack.Navigator
       initialRouteName="Download"
