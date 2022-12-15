@@ -27,10 +27,12 @@ export function PlaylistScreen({ navigation }: Props) {
           <SearchIcon className="mb-1 h-5 w-5 text-white" />
         </View>
         <CustomButton
+          onPress={() => navigation.navigate('CreatePlaylist')}
           leftIcon={<PlusIcon className="h-4 w-4 text-white" />}
           text="Create a new playlist"
         />
         <HorizontalLine />
+
         <View className="mt-6 flex-row items-center justify-between">
           <Text className="text-2xl font-semibold text-white">Favorites</Text>
           <TouchableOpacity onPress={() => navigation.navigate('DetailMovie')}>
