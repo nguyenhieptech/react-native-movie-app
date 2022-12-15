@@ -16,16 +16,29 @@ interface ButtonProps extends TouchableOpacityProps {
 
   /** Button children text */
   text: string;
+
+  /** Style for Text */
+  classNameText?: string;
+
+  /** Style for TouchableOpacity */
+  classNameTouchableOpacity?: string;
 }
 
 export const CustomButton = forwardRef<TouchableOpacity, ButtonProps>(
   function CustomButton(props, ref) {
-    const { leftIcon, text = 'Button', children, ...otherProps } = props;
+    const {
+      leftIcon,
+      text = 'Button',
+      classNameTouchableOpacity,
+      classNameText,
+      ...otherProps
+    } = props;
 
     return (
       <TouchableOpacity
         className={classNames(
           'mt-5 h-12 flex-row items-center justify-center overflow-hidden rounded',
+          classNameTouchableOpacity ? classNameTouchableOpacity : '',
           leftIcon ? 'space-x-4' : ''
         )}
         ref={ref}
@@ -35,7 +48,13 @@ export const CustomButton = forwardRef<TouchableOpacity, ButtonProps>(
 
         {leftIcon ? leftIcon : null}
 
-        <Text className={classNames('text-white', leftIcon ? 'mr-8 ' : '')}>
+        <Text
+          className={classNames(
+            'text-white',
+            classNameText ? classNameText : '',
+            leftIcon ? 'mr-8 ' : ''
+          )}
+        >
           {text}
         </Text>
       </TouchableOpacity>
