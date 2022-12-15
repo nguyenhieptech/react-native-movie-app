@@ -52,6 +52,7 @@ export type HomeStackParamList = {
 export type PlaylistStackParamList = {
   Playlist: undefined;
   DetailMovie: undefined;
+  CreatePlaylist: undefined;
 };
 
 export type SettingsStackParamList = {

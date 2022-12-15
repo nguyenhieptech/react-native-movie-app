@@ -1,8 +1,8 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { CommonScreensStackNavigator } from './common';
 import { MainBottomTabsNavigator } from './main';
 import { AppStackParamList } from './types';
+import { SplashScreen } from 'src/screens/SplashScreen';
 
 export const Stack = createNativeStackNavigator<AppStackParamList>();
 
@@ -18,5 +18,14 @@ export function AppNavigator() {
         {CommonScreensStackNavigator()}
       </Stack.Navigator>
     </NavigationContainer>
+  );
+}
+
+/** Screens that don't need Bottom Tabs */
+function CommonScreensStackNavigator() {
+  return (
+    <Stack.Group screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="Splash" component={SplashScreen} />
+    </Stack.Group>
   );
 }
