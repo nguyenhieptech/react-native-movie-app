@@ -56,7 +56,12 @@ export type PlaylistStackParamList = {
 };
 
 export type SettingsStackParamList = {
+  AboutAuthor: undefined;
+  Contact: undefined;
+  PreviewAssets: undefined;
+  SettingsDetail: undefined;
   Settings: undefined;
+  UpdateProfile: undefined;
 };
 
 /**
