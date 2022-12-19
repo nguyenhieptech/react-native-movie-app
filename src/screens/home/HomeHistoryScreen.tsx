@@ -4,7 +4,6 @@ import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import { ChevronLeftIcon } from 'src/assets/icons';
 import { Header, HorizontalLine, LinearProgressBar } from 'src/components';
-import { navigationRef } from 'src/navigation';
 import { HomeStackParamList } from 'src/navigation/types';
 import { theme } from 'src/theme';
 
@@ -24,12 +23,6 @@ export function HomeHistoryScreen({ navigation }: Props) {
             hitSlop={theme.hitSlopIcon}
             onPress={() => {
               navigation.goBack();
-              navigationRef.navigate('MainBottomTabs', {
-                screen: 'PlaylistStack',
-                params: {
-                  screen: 'CreatePlaylist',
-                },
-              });
             }}
           >
             <ChevronLeftIcon className="h-5 w-5 text-white" />
