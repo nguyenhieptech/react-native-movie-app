@@ -1,21 +1,45 @@
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React from 'react';
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import FastImage from 'react-native-fast-image';
+import { ChevronLeftIcon } from 'src/assets/icons';
 import { Header, HorizontalLine, LinearProgressBar } from 'src/components';
+import { navigationRef } from 'src/navigation';
+import { HomeStackParamList } from 'src/navigation/types';
+import { theme } from 'src/theme';
 
-export function HomeHistoryScreen() {
+type Props = NativeStackScreenProps<HomeStackParamList, 'HomeHistory'>;
+
+export function HomeHistoryScreen({ navigation }: Props) {
   return (
     <View className="flex-1 bg-black px-5">
       <FastImage
         className="absolute inset-0"
         source={require('src/assets/img/background_375_812.png')}
       />
-
-      <Header headerTitle="History" />
+      <Header
+        headerTitle="History"
+        headerLeft={
+          <TouchableOpacity
+            hitSlop={theme.hitSlopIcon}
+            onPress={() => {
+              navigation.goBack();
+              navigationRef.navigate('MainBottomTabs', {
+                screen: 'PlaylistStack',
+                params: {
+                  screen: 'CreatePlaylist',
+                },
+              });
+            }}
+          >
+            <ChevronLeftIcon className="h-5 w-5 text-white" />
+          </TouchableOpacity>
+        }
+      />
+      <HorizontalLine />
 
       <ScrollView className="mt-3" showsVerticalScrollIndicator={false}>
         {/* Today */}
-        <HorizontalLine />
         <View className="mt-6">
           <Text className="text-sm font-semibold text-white">Today</Text>
           <ScrollView
