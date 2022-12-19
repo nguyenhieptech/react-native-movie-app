@@ -17,7 +17,7 @@ type Props = NativeStackScreenProps<HomeStackParamList, 'Home'>;
 export function HomeScreen({ navigation }: Props) {
   const [text, onChangeText] = useState('');
 
-  function goToPlaylistStack() {
+  function navigateToPlaylistStack() {
     navigationRef.navigate('MainBottomTabs', {
       screen: 'PlaylistStack',
       params: {
@@ -46,7 +46,7 @@ export function HomeScreen({ navigation }: Props) {
         <View>
           <View className="mt-6 flex-row items-center justify-between">
             <Text className="text-2xl font-semibold text-white">Playlists</Text>
-            <TouchableOpacity onPress={() => goToPlaylistStack()}>
+            <TouchableOpacity onPress={() => navigateToPlaylistStack()}>
               <RightArrowIcon className="h-5 w-5 text-primary" />
             </TouchableOpacity>
           </View>
