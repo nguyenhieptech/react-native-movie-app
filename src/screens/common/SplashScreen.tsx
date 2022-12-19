@@ -3,9 +3,9 @@ import React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import { AppStackParamList } from 'src/navigation/types';
 
-export function SplashScreen({
-  navigation,
-}: NativeStackScreenProps<AppStackParamList, 'Splash'>) {
+type Props = NativeStackScreenProps<AppStackParamList, 'Splash'>;
+
+export function SplashScreen({ navigation }: Props) {
   return (
     <View className="flex-1 items-center justify-center bg-slate-800">
       <Text className="mt-4 text-4xl font-bold text-slate-100">
