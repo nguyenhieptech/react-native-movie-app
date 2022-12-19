@@ -1,3 +1,4 @@
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React, { useState } from 'react';
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import FastImage from 'react-native-fast-image';
@@ -8,9 +9,22 @@ import {
   VerticalDotsIcon,
 } from 'src/assets/icons';
 import { HorizontalLine, LinearProgressBar, SearchInput } from 'src/components';
+import { navigationRef } from 'src/navigation';
+import { HomeStackParamList } from 'src/navigation/types';
 
-export function HomeScreen() {
+type Props = NativeStackScreenProps<HomeStackParamList, 'Home'>;
+
+export function HomeScreen({ navigation }: Props) {
   const [text, onChangeText] = useState('');
+
+  function goToPlaylistStack() {
+    navigationRef.navigate('MainBottomTabs', {
+      screen: 'PlaylistStack',
+      params: {
+        screen: 'Playlist',
+      },
+    });
+  }
 
   return (
     <View className="flex-1 bg-black px-5">
@@ -21,14 +35,18 @@ export function HomeScreen() {
 
       <ScrollView showsVerticalScrollIndicator={false}>
         <Text className="mt-8 text-2xl font-semibold text-white">Research</Text>
-        <SearchInput value={text} onChangeText={onChangeText} />
+        <SearchInput
+          value={text}
+          onChangeText={onChangeText}
+          placeholder="Search..."
+        />
 
         {/* Playlists */}
         <HorizontalLine />
         <View>
           <View className="mt-6 flex-row items-center justify-between">
             <Text className="text-2xl font-semibold text-white">Playlists</Text>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => goToPlaylistStack()}>
               <RightArrowIcon className="h-5 w-5 text-primary" />
             </TouchableOpacity>
           </View>
@@ -97,7 +115,9 @@ export function HomeScreen() {
         <View>
           <View className="mt-6 flex-row items-center justify-between">
             <Text className="text-2xl font-semibold text-white">New</Text>
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('HomeNewMovie')}
+            >
               <RightArrowIcon className="h-5 w-5 text-primary" />
             </TouchableOpacity>
           </View>
@@ -185,7 +205,9 @@ export function HomeScreen() {
         <View>
           <View className="mt-6 flex-row items-center justify-between">
             <Text className="text-2xl font-semibold text-white">History</Text>
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('HomeHistory')}
+            >
               <RightArrowIcon className="h-5 w-5 text-primary" />
             </TouchableOpacity>
           </View>
