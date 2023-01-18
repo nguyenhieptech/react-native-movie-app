@@ -32,6 +32,9 @@ yarn install
 3. Pod install for iOS
 
 ```bash
+# Update: 17/01/2023
+# You may use http://rbenv.org/ or https://rvm.io/ to install and use ruby version '2.7.5'
+
 npx pod-install
 ```
 
