@@ -40,11 +40,7 @@ type Props = NativeStackScreenProps<SettingsStackParamList, 'PreviewAssets'>;
 
 export function PreviewAssetsScreen({ navigation }: Props) {
   return (
-    <ScreenContainer>
-      <FastImage
-        className="absolute inset-0"
-        source={require('src/assets/img/background_375_812.png')}
-      />
+    <ScreenContainer hasBackground={true}>
       <Header
         headerTitle="Preview Assets"
         headerLeft={

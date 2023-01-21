@@ -11,11 +11,7 @@ type Props = NativeStackScreenProps<SettingsStackParamList, 'AboutAuthor'>;
 
 export function AboutAuthorScreen({ navigation }: Props) {
   return (
-    <ScreenContainer>
-      <FastImage
-        className="absolute inset-0"
-        source={require('src/assets/img/background_375_812.png')}
-      />
+    <ScreenContainer hasBackground={true}>
       <Header
         headerTitle="About the author"
         headerLeft={

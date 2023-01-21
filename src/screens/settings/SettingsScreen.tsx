@@ -16,11 +16,7 @@ type Props = NativeStackScreenProps<SettingsStackParamList, 'Settings'>;
 
 export function SettingsScreen({ navigation }: Props) {
   return (
-    <ScreenContainer>
-      <FastImage
-        className="absolute inset-0"
-        source={require('src/assets/img/background_375_812.png')}
-      />
+    <ScreenContainer hasBackground={true}>
       <View className="mt-6 flex-row space-x-4">
         <FastImage
           className="h-12 w-12 rounded-full"
@@ -78,6 +74,14 @@ export function SettingsScreen({ navigation }: Props) {
         >
           <EditIcon className="h-6 w-6 text-primary" />
           <Text className="ml-3 text-white">Preview Assets</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          className="flex-row items-center py-2"
+          onPress={() => navigation.navigate('PushNotifications')}
+        >
+          <EditIcon className="h-6 w-6 text-primary" />
+          <Text className="ml-3 text-white">Push Notifications</Text>
         </TouchableOpacity>
       </View>
 

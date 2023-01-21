@@ -1,7 +1,6 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React, { useState } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
-import FastImage from 'react-native-fast-image';
 import { ChevronLeftIcon } from 'src/assets/icons';
 import {
   CustomSwitch,
@@ -21,11 +20,7 @@ export function SettingsDetailScreen({ navigation }: Props) {
   const [isSleepTimerEnabled, setIsSleepTimerEnabled] = useState(false);
 
   return (
-    <ScreenContainer>
-      <FastImage
-        className="absolute inset-0"
-        source={require('src/assets/img/background_375_812.png')}
-      />
+    <ScreenContainer hasBackground={true}>
       <Header
         headerTitle="Settings"
         headerLeft={

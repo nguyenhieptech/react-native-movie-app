@@ -3,7 +3,6 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { Alert, Text, TouchableOpacity, View } from 'react-native';
-import FastImage from 'react-native-fast-image';
 import {
   ChevronLeftIcon,
   RadioButtonIcon,
@@ -16,6 +15,7 @@ import {
   FormErrorMessage,
   Header,
   HorizontalLine,
+  ScreenContainer,
 } from 'src/components';
 import { PlaylistStackParamList } from 'src/navigation/types';
 import { theme } from 'src/theme';
@@ -59,12 +59,7 @@ export function CreatePlaylistScreen({ navigation }: Props) {
   }
 
   return (
-    <View className="flex-1 bg-black px-5">
-      <FastImage
-        className="absolute inset-0"
-        source={require('src/assets/img/background_375_812.png')}
-      />
-
+    <ScreenContainer hasBackground={true}>
       <Header
         headerTitle="Create a Playlist"
         headerLeft={
@@ -179,6 +174,6 @@ export function CreatePlaylistScreen({ navigation }: Props) {
         text="Create a playlist"
         onPress={handleSubmit(handleOnSubmit)}
       />
-    </View>
+    </ScreenContainer>
   );
 }
