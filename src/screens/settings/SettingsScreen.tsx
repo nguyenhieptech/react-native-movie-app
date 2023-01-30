@@ -80,7 +80,7 @@ export function SettingsScreen({ navigation }: Props) {
           className="flex-row items-center py-2"
           onPress={() => navigation.navigate('PushNotifications')}
         >
-          <EditIcon className="h-6 w-6 text-primary" />
+          <WarningIcon className="h-6 w-6 text-primary" />
           <Text className="ml-3 text-white">Push Notifications</Text>
         </TouchableOpacity>
       </View>

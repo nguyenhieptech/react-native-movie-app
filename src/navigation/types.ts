@@ -62,6 +62,7 @@ export type SettingsStackParamList = {
   SettingsDetail: undefined;
   Settings: undefined;
   UpdateProfile: undefined;
+  PushNotifications: undefined;
 };
 
 /**

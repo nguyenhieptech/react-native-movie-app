@@ -4,6 +4,7 @@ import {
   AboutAuthorScreen,
   ContactScreen,
   PreviewAssetsScreen,
+  PushNotificationsScreen,
   SettingsDetailScreen,
   SettingsScreen,
   UpdateProfileScreen,
@@ -24,6 +25,10 @@ export function SettingsStack() {
       <Stack.Screen name="SettingsDetail" component={SettingsDetailScreen} />
       <Stack.Screen name="Settings" component={SettingsScreen} />
       <Stack.Screen name="UpdateProfile" component={UpdateProfileScreen} />
+      <Stack.Screen
+        name="PushNotifications"
+        component={PushNotificationsScreen}
+      />
     </Stack.Navigator>
   );
 }
