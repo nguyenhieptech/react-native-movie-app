@@ -11,7 +11,7 @@ type Props = NativeStackScreenProps<SettingsStackParamList, 'Contact'>;
 
 export function ContactScreen({ navigation }: Props) {
   return (
-    <ScreenContainer hasBackground>
+    <ScreenContainer hasBackground hasHorizontalPadding>
       <Header
         headerTitle="Contacts"
         headerLeft={

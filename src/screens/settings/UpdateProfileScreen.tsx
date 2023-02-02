@@ -49,7 +49,7 @@ export function UpdateProfileScreen({ navigation }: Props) {
   }
 
   return (
-    <ScreenContainer hasBackground>
+    <ScreenContainer hasBackground hasHorizontalPadding>
       <Header
         headerTitle="Profile"
         headerLeft={

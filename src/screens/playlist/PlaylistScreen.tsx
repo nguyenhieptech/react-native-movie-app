@@ -16,7 +16,7 @@ type Props = NativeStackScreenProps<PlaylistStackParamList, 'Playlist'>;
 
 export function PlaylistScreen({ navigation }: Props) {
   return (
-    <ScreenContainer hasBackground>
+    <ScreenContainer hasBackground hasHorizontalPadding>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View className="mt-8 flex-row items-end justify-between">
           <Text className="text-2xl font-semibold text-white">Playlist</Text>

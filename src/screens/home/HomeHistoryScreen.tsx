@@ -16,7 +16,7 @@ type Props = NativeStackScreenProps<HomeStackParamList, 'HomeHistory'>;
 
 export function HomeHistoryScreen({ navigation }: Props) {
   return (
-    <ScreenContainer hasBackground>
+    <ScreenContainer hasBackground hasHorizontalPadding>
       <Header
         headerTitle="History"
         headerLeft={

@@ -11,7 +11,7 @@ type Props = NativeStackScreenProps<SettingsStackParamList, 'AboutAuthor'>;
 
 export function AboutAuthorScreen({ navigation }: Props) {
   return (
-    <ScreenContainer hasBackground>
+    <ScreenContainer hasBackground hasHorizontalPadding>
       <Header
         headerTitle="About the author"
         headerLeft={

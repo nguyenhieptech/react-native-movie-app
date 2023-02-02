@@ -59,7 +59,7 @@ export function CreatePlaylistScreen({ navigation }: Props) {
   }
 
   return (
-    <ScreenContainer hasBackground>
+    <ScreenContainer hasBackground hasHorizontalPadding>
       <Header
         headerTitle="Create a Playlist"
         headerLeft={

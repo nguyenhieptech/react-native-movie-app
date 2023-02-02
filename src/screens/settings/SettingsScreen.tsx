@@ -16,7 +16,7 @@ type Props = NativeStackScreenProps<SettingsStackParamList, 'Settings'>;
 
 export function SettingsScreen({ navigation }: Props) {
   return (
-    <ScreenContainer hasBackground>
+    <ScreenContainer hasBackground hasHorizontalPadding>
       <View className="mt-6 flex-row space-x-4">
         <FastImage
           className="h-12 w-12 rounded-full"

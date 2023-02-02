@@ -45,7 +45,7 @@ export function PushNotificationsScreen({ navigation }: Props) {
   }
 
   return (
-    <ScreenContainer hasBackground>
+    <ScreenContainer hasBackground hasHorizontalPadding>
       <Header
         headerTitle="Push Notifications"
         headerLeft={

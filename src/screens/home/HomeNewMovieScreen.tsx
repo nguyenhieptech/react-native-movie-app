@@ -18,6 +18,7 @@ import {
   CustomButton,
   Header,
   HorizontalLine,
+  ScreenContainer,
   SearchInput,
 } from 'src/components';
 import { HomeStackParamList } from 'src/navigation/types';
@@ -33,13 +34,8 @@ export function HomeNewMovieScreen({ navigation }: Props) {
   const [isToShareModalVisible, setIsToShareModalVisible] = useState(false);
 
   return (
-    <View className="flex-1 bg-black">
-      <FastImage
-        className="absolute inset-0"
-        source={require('src/assets/img/background_375_812.png')}
-      />
-
-      <View className="px-5">
+    <>
+      <ScreenContainer hasBackground hasHorizontalPadding>
         <Header
           headerTitle="New movies"
           headerLeft={
@@ -155,7 +151,7 @@ export function HomeNewMovieScreen({ navigation }: Props) {
             </View>
           </View>
         </ScrollView>
-      </View>
+      </ScreenContainer>
 
       {/* Modals */}
       <View>
@@ -358,6 +354,6 @@ export function HomeNewMovieScreen({ navigation }: Props) {
           </View>
         </Modal>
       </View>
-    </View>
+    </>
   );
 }

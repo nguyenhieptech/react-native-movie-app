@@ -32,7 +32,7 @@ export function HomeScreen({ navigation }: Props) {
   }
 
   return (
-    <ScreenContainer hasBackground>
+    <ScreenContainer hasBackground hasHorizontalPadding>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Text className="mt-8 text-2xl font-semibold text-white">Research</Text>
         <SearchInput

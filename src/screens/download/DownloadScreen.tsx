@@ -2,17 +2,13 @@ import React, { useState } from 'react';
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import { SliderIcon, VerticalDotsIcon } from 'src/assets/icons';
-import { HorizontalLine, SearchInput } from 'src/components';
+import { HorizontalLine, ScreenContainer, SearchInput } from 'src/components';
 
 export function DownloadScreen() {
   const [text, onChangeText] = useState('');
 
   return (
-    <View className="flex-1 bg-black">
-      <FastImage
-        className="absolute inset-0"
-        source={require('src/assets/img/background_375_812.png')}
-      />
+    <ScreenContainer hasBackground>
       <View className="px-5">
         <Text className="mt-8 text-2xl font-semibold text-white">Search</Text>
         <SearchInput
@@ -109,6 +105,6 @@ export function DownloadScreen() {
           </View>
         </ScrollView>
       </View>
-    </View>
+    </ScreenContainer>
   );
 }

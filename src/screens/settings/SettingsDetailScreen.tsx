@@ -20,7 +20,7 @@ export function SettingsDetailScreen({ navigation }: Props) {
   const [isSleepTimerEnabled, setIsSleepTimerEnabled] = useState(false);
 
   return (
-    <ScreenContainer hasBackground>
+    <ScreenContainer hasBackground hasHorizontalPadding>
       <Header
         headerTitle="Settings"
         headerLeft={

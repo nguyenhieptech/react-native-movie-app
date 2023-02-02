@@ -11,7 +11,7 @@ import {
   SliderIcon,
   VerticalDotsIcon,
 } from 'src/assets/icons';
-import { Header, HorizontalLine } from 'src/components';
+import { Header, HorizontalLine, ScreenContainer } from 'src/components';
 import { PlaylistStackParamList } from 'src/navigation/types';
 import { theme } from 'src/theme';
 import { classNames } from 'src/utils';
@@ -22,12 +22,7 @@ export function DetailMovieScreen({ navigation }: Props) {
   const [isShowMore, setIsShowMore] = useState(false);
 
   return (
-    <View className="flex-1 bg-black">
-      <FastImage
-        className="absolute inset-0"
-        source={require('src/assets/img/background_375_812.png')}
-      />
-
+    <ScreenContainer hasBackground>
       <View className="px-5">
         <Header
           headerTitle="Playlist"
@@ -181,6 +176,6 @@ export function DetailMovieScreen({ navigation }: Props) {
           </View>
         </View>
       </ScrollView>
-    </View>
+    </ScreenContainer>
   );
 }
