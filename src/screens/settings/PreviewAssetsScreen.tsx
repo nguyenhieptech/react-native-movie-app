@@ -40,7 +40,7 @@ type Props = NativeStackScreenProps<SettingsStackParamList, 'PreviewAssets'>;
 
 export function PreviewAssetsScreen({ navigation }: Props) {
   return (
-    <ScreenContainer hasBackground={true}>
+    <ScreenContainer hasBackground>
       <Header
         headerTitle="Preview Assets"
         headerLeft={

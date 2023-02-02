@@ -59,7 +59,7 @@ export function CreatePlaylistScreen({ navigation }: Props) {
   }
 
   return (
-    <ScreenContainer hasBackground={true}>
+    <ScreenContainer hasBackground>
       <Header
         headerTitle="Create a Playlist"
         headerLeft={
