@@ -9,18 +9,14 @@ import {
   RightArrowIcon,
   SearchIcon,
 } from 'src/assets/icons';
-import { CustomButton, HorizontalLine } from 'src/components';
+import { CustomButton, HorizontalLine, ScreenContainer } from 'src/components';
 import { PlaylistStackParamList } from 'src/navigation/types';
 
 type Props = NativeStackScreenProps<PlaylistStackParamList, 'Playlist'>;
 
 export function PlaylistScreen({ navigation }: Props) {
   return (
-    <View className="flex-1 bg-black px-5">
-      <FastImage
-        className="absolute inset-0"
-        source={require('src/assets/img/background_375_812.png')}
-      />
+    <ScreenContainer hasBackground hasHorizontalPadding>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View className="mt-8 flex-row items-end justify-between">
           <Text className="text-2xl font-semibold text-white">Playlist</Text>
@@ -120,6 +116,6 @@ export function PlaylistScreen({ navigation }: Props) {
           </View>
         </ScrollView>
       </ScrollView>
-    </View>
+    </ScreenContainer>
   );
 }

@@ -4,14 +4,16 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "ios-ip12": "react-native run-ios --simulator='iPhone 12 (14.5)'",
+    "ios": "react-native run-ios --simulator='iPhone 12 (14.5)'",
+    "ios-latest": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx}\""
   },
   "dependencies": {
     "@hookform/resolvers": "^2.9.10",
+    "@notifee/react-native": "^7.4.0",
     "@react-navigation/bottom-tabs": "^6.4.0",
     "@react-navigation/native": "^6.0.13",
     "@react-navigation/native-stack": "^6.9.1",

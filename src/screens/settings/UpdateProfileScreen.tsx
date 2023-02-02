@@ -3,7 +3,6 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import { Alert, Text, TouchableOpacity, View } from 'react-native';
-import FastImage from 'react-native-fast-image';
 import { ChevronLeftIcon, SaveIcon, UploadImageIcon } from 'src/assets/icons';
 import {
   CustomButton,
@@ -50,11 +49,7 @@ export function UpdateProfileScreen({ navigation }: Props) {
   }
 
   return (
-    <ScreenContainer>
-      <FastImage
-        className="absolute inset-0"
-        source={require('src/assets/img/background_375_812.png')}
-      />
+    <ScreenContainer hasBackground hasHorizontalPadding>
       <Header
         headerTitle="Profile"
         headerLeft={

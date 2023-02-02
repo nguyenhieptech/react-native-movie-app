@@ -3,7 +3,12 @@ import React from 'react';
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import { ChevronLeftIcon } from 'src/assets/icons';
-import { Header, HorizontalLine, LinearProgressBar } from 'src/components';
+import {
+  Header,
+  HorizontalLine,
+  LinearProgressBar,
+  ScreenContainer,
+} from 'src/components';
 import { HomeStackParamList } from 'src/navigation/types';
 import { theme } from 'src/theme';
 
@@ -11,11 +16,7 @@ type Props = NativeStackScreenProps<HomeStackParamList, 'HomeHistory'>;
 
 export function HomeHistoryScreen({ navigation }: Props) {
   return (
-    <View className="flex-1 bg-black px-5">
-      <FastImage
-        className="absolute inset-0"
-        source={require('src/assets/img/background_375_812.png')}
-      />
+    <ScreenContainer hasBackground hasHorizontalPadding>
       <Header
         headerTitle="History"
         headerLeft={
@@ -274,6 +275,6 @@ export function HomeHistoryScreen({ navigation }: Props) {
           </ScrollView>
         </View>
       </ScrollView>
-    </View>
+    </ScreenContainer>
   );
 }

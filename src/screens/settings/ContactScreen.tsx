@@ -11,11 +11,7 @@ type Props = NativeStackScreenProps<SettingsStackParamList, 'Contact'>;
 
 export function ContactScreen({ navigation }: Props) {
   return (
-    <ScreenContainer>
-      <FastImage
-        className="absolute inset-0"
-        source={require('src/assets/img/background_375_812.png')}
-      />
+    <ScreenContainer hasBackground hasHorizontalPadding>
       <Header
         headerTitle="Contacts"
         headerLeft={

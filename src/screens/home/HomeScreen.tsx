@@ -8,7 +8,12 @@ import {
   RightArrowIcon,
   VerticalDotsIcon,
 } from 'src/assets/icons';
-import { HorizontalLine, LinearProgressBar, SearchInput } from 'src/components';
+import {
+  HorizontalLine,
+  LinearProgressBar,
+  ScreenContainer,
+  SearchInput,
+} from 'src/components';
 import { navigationRef } from 'src/navigation';
 import { HomeStackParamList } from 'src/navigation/types';
 
@@ -27,12 +32,7 @@ export function HomeScreen({ navigation }: Props) {
   }
 
   return (
-    <View className="flex-1 bg-black px-5">
-      <FastImage
-        className="absolute inset-0"
-        source={require('src/assets/img/background_375_1206.png')}
-      />
-
+    <ScreenContainer hasBackground hasHorizontalPadding>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Text className="mt-8 text-2xl font-semibold text-white">Research</Text>
         <SearchInput
@@ -288,6 +288,6 @@ export function HomeScreen({ navigation }: Props) {
           </ScrollView>
         </View>
       </ScrollView>
-    </View>
+    </ScreenContainer>
   );
 }
