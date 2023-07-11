@@ -4,9 +4,9 @@ https://github.com/nguyenhieptech/react-native-movie-app/assets/48057064/d71849a
 
 This project is set up by following [the official guideline](https://reactnative.dev/docs/environment-setup).
 
-Open/Download video from `assets/react-native-movie-app-demo.mp4` to see the demo.
-
 Figma template: https://www.figma.com/community/file/1146369033825819538
+
+**Update 11/07/2023**: The author might delete this Figma community file, so yeah, not found.
 
 ## Table of Contents
 
