@@ -1,6 +1,6 @@
 # React Native Movie App
 
-<img src="./assets/preview.png">
+https://github.com/nguyenhieptech/react-native-movie-app/assets/48057064/d71849a4-ee77-429b-bb4b-95d66437facf
 
 This project is set up by following [the official guideline](https://reactnative.dev/docs/environment-setup).
 
